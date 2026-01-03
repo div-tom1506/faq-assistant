@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.faq_assistant.entity.Users;
 
 @Repository
-public interface UserRepository extends JpaRepository<Users, Long>{
+public interface UserRepository extends JpaRepository<Users, Long> {
 
 }

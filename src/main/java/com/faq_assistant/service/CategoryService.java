@@ -13,13 +13,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CategoryService {
 
-	private final CategoryRepository categoryRepository;
-	
-	public Category createCategory(Category category) {
-		return categoryRepository.save(category);
-	}
-	
-	public List<Category> getAllCategory() {
-		return categoryRepository.findAll();
-	}
+    private final CategoryRepository categoryRepository;
+
+    public Category createCategory(Category category) {
+        return categoryRepository.save(category);
+    }
+
+    public List<Category> getAllCategory() {
+        return categoryRepository.findAll();
+    }
 }

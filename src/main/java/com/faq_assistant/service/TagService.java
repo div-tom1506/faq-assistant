@@ -12,14 +12,14 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class TagService {
-	
-	private final TagRepository tagRepository;
-	
-	public Tag createTag(Tag tag) {
-		return tagRepository.save(tag);
-	}
-	
-	public List<Tag> getAllTag() {
-		return tagRepository.findAll();
-	}
+
+    private final TagRepository tagRepository;
+
+    public Tag createTag(Tag tag) {
+        return tagRepository.save(tag);
+    }
+
+    public List<Tag> getAllTag() {
+        return tagRepository.findAll();
+    }
 }

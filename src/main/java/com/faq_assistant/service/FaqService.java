@@ -10,9 +10,13 @@ import com.faq_assistant.dto.FaqResponseDto;
 
 public interface FaqService {
 
-	FaqResponseDto createFaq(FaqRequestDto request);
-	FaqResponseDto getFaqById(Long id);
-	Page<FaqResponseDto> searchFaqs(String search, Long categoryId, List<Long> tagids, Pageable pageable);
-	FaqResponseDto updateFaq(Long id, FaqRequestDto request);
-	void deleteFaq(Long id);
+    FaqResponseDto createFaq(FaqRequestDto request);
+
+    FaqResponseDto getFaqById(Long id);
+
+    Page<FaqResponseDto> searchFaqs(String search, Long categoryId, List<Long> tagids, Pageable pageable);
+
+    FaqResponseDto updateFaq(Long id, FaqRequestDto request);
+
+    void deleteFaq(Long id);
 }
