@@ -22,5 +22,4 @@ public class TagService {
 	public List<Tag> getAllTag() {
 		return tagRepository.findAll();
 	}
-
 }
