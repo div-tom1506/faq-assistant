@@ -39,7 +39,7 @@ public class AiSuggestionService {
     private String callAi(String prompt) {
 
         String url = "https://generativelanguage.googleapis.com/v1beta/models/"
-                + +aiConfig.getModel()
+                + aiConfig.getModel()
                 + ":generateContent?key="
                 + aiConfig.getApiKey();
 
