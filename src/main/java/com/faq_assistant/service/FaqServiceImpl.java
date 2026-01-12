@@ -15,6 +15,7 @@ import com.faq_assistant.entity.Category;
 import com.faq_assistant.entity.Faq;
 import com.faq_assistant.entity.Tag;
 import com.faq_assistant.entity.Users;
+import com.faq_assistant.exception.ResourceNotFoundException;
 import com.faq_assistant.repository.CategoryRepository;
 import com.faq_assistant.repository.FaqRepository;
 import com.faq_assistant.repository.TagRepository;
@@ -97,7 +98,7 @@ public class FaqServiceImpl implements FaqService {
     @Override
     public void deleteFaq(Long id) {
         if ((!faqRepository.existsById(id))) {
-            throw new ResourceNotFoundException("FAQ not found")
+            throw new ResourceNotFoundException("FAQ not found");
         }
         faqRepository.deleteById(id);
     }
@@ -115,7 +116,6 @@ public class FaqServiceImpl implements FaqService {
                         .toList()
         );
         dto.setCreatedBy(faq.getCreatedBy().getName());
-//		dto.setCreatedAt(faq.getCreatedAt());
 
         return dto;
 

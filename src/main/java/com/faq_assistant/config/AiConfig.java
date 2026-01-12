@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AiConfig {
 
-    @Value()
+    @Value("${gemini.api-key}")
     private String apiKey;
 
-    @Value
+    @Value("${gemini.model}")
     private String model;
 
 }
